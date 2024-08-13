@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Course Feedback Form</h2>
+        <form action="/submit_feedback" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="">Select Course</option>
+                <option value="Web Development">Web Development</option>
+            </select>
+
+            <label for="contentQuality">Content Quality:</label>
+            <select id="contentQuality" name="contentQuality" required>
+                <option value="">Select Rating</option>
+                <option value="1">1 - Very Bad</option>
+                <option value="2">2 - Bad </option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label for="instructorEffectiveness">Instructor Effectiveness:</label>
+            <select id="instructorEffectiveness" name="instructorEffectiveness" required>
+                <option value="">Select Rating</option>
+                <option value="">Select Rating</option>
+                <option value="1">1 - Very Bad</option>
+                <option value="2">2 - Bad </option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label for="overallExperience">Overall Experience:</label>
+            <select id="overallExperience" name="overallExperience" required>
+                <option value="">Select Rating</option>
+                <option value="1">1 - Very Bad</option>
+                <option value="2">2 - Bad </option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional feedback..."></textarea>
+
+            <input type="submit" value="Submit Feedback">
+        </form>
+    </div>
+</body>
+</html>
